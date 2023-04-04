@@ -32,7 +32,7 @@
         height: 75px;
       }
       .container {
-        background-color: blue;
+        background-color: #fff;
         width: 100%;
         height: 1000px;
         display: flex;
@@ -45,7 +45,6 @@
       }
       .title {}
       .side-menu {
-        background-color: yellow;
         width: 22%;
         height: 400px;
       }
@@ -78,12 +77,37 @@
         height: 400px;
       }
       .side-column {
-        background-color: black;
         width: 19%;
         height: 400px;
       }
       table {
         font-size: 12px;
+      }
+      .side-menu {
+        margin-top: 50px;
+      }
+      .side-menu-list{
+        padding-left: 15%;
+      }
+      .side-menu-title {
+        padding-left: 15%;
+      }
+      .side-menu-item{
+        margin-top: 8px;
+        display: block;
+        text-decoration: none;
+      }
+      .side-menu-item:first-of-type {
+        color: black;
+        font-weight: 800;
+      }
+      .side-menu-item:hover {
+        text-decoration: underline;
+      }
+      .divider {
+        width: 100%;
+        height: 1px;
+        background-color: lightgrey;
       }
     </style>
   </head>
@@ -91,17 +115,19 @@
     <div class="horiz-menu"></div>
     <div class="container">
       <nav class="side-menu">
-        <ul>
-          <a href="#">Início</a>
-          <a href="#">História</a>
-          <a href="#">Descrição</a>
-          <a href="#">Exemplo de código HTML5</a>
-          <a href="#">Populariadade</a>
-          <a href="#">Logo do HTML5</a>
-          <a href="#">Novos elementos do HTML5</a>
-          <a href="#">Ver também</a>
-          <a href="#">Bibliografia</a>
-          <a href="#">Referências</a>
+        <p class="side-menu-title">Conteúdo</p>
+        <div class="divider"></div>
+        <ul class="side-menu-list">
+          <a class="side-menu-item" href="#">Início</a>
+          <a class="side-menu-item" href="#">História</a>
+          <a class="side-menu-item" href="#">Descrição</a>
+          <a class="side-menu-item" href="#">Exemplo de código HTML5</a>
+          <a class="side-menu-item" href="#">Populariadade</a>
+          <a class="side-menu-item" href="#">Logo do HTML5</a>
+          <a class="side-menu-item" href="#">Novos elementos do HTML5</a>
+          <a class="side-menu-item" href="#">Ver também</a>
+          <a class="side-menu-item" href="#">Bibliografia</a>
+          <a class="side-menu-item" href="#">Referências</a>
         </ul>
       </nav>
       <div class="content">
