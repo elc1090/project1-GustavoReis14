@@ -1,224 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Wikipédia</title>
+<!--  ----------------------------------------------------------------------  -->
+  <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+  <!--  If necessary, please modify the charset parameter to specify the        -->
+  <!--  character set of your HTML page.                                        -->
+  <!--  ----------------------------------------------------------------------  -->
+  <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <FORM> element to your page.             -->
+    <!--  ----------------------------------------------------------------------  -->
+    <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+    <input type=hidden name="oid" value="00D8B0000008hfE">
+    <input type=hidden name="retURL" value="http://">
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+    <!--  these lines if you wish to test in debug mode.                          -->
+    <!--  <input type="hidden" name="debug" value=1>                              -->
+    <!--  <input type="hidden" name="debugEmail" value="jyunis@cognyhub.com">     -->
+    <!--  ----------------------------------------------------------------------  -->
     <style>
-      html, body, div, span, applet, object, iframe,
-      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-      a, abbr, acronym, address, big, cite, code,
-      del, dfn, em, img, ins, kbd, q, s, samp,
-      small, strike, strong, sub, sup, tt, var,
-      b, u, i, center,
-      dl, dt, dd, ol, ul, li,
-      fieldset, form, label, legend,
-      table, caption, tbody, tfoot, thead, tr, th, td,
-      article, aside, canvas, details, embed, 
-      figure, figcaption, footer, header, hgroup, 
-      menu, nav, output, ruby, section, summary,
-      time, mark, audio, video {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-      }
-      .horiz-menu {
-        width: 100%;
-        height: 75px;
-      }
-      .container {
-        background-color: #fff;
-        width: 100%;
-        height: 600px;
-        display: flex;
-        flex-direction: row;
-      }
-      .content {
-        width: 78%;
-        display: flex;
-        flex-direction: row;
-      }
-      .information {
-        display: flex;
-        flex-direction: row;
-      }
-      .title {
-        width: 100%;
-      }
-      .side-menu {
-        width: 22%;
-        height: 400px;
-      }
-      .description {
-        margin-top: 55px;
-        background-color: #f8f9fa;
-        width: 25%;
-        height: 400px;
-        border: solid;
-        border-width: 1px;
-      }
-      .description-banner {
-        width: 96%;
-        height: 50px;
-        background-color: blue;
-        text-align: center;
-        justify-content: center;
-        margin-left: 2%;
-        margin-top: 2%;
-      }
-      .description-banner p {
-        padding-top: 7%;
-        font-weight: 800;
-      }
-      .description-banner img {
-        width: 96%;
-        margin-top: 10%;
-      }
-      .main-text {
-        width: 75%;
-        height: 400px;
-      }
-      .side-column {
-        width: 19%;
-        height: 400px;
-      }
-      table {
-        font-size: 12px;
-      }
-      .side-menu {
-        margin-top: 50px;
-      }
-      .side-menu-list{
-        padding-left: 15%;
-      }
-      .side-menu-title {
-        padding-left: 15%;
-      }
-      .side-menu-item{
-        margin-top: 8px;
-        display: block;
-        text-decoration: none;
-      }
-      .side-menu-item:first-of-type {
-        color: black;
-        font-weight: 800;
-      }
-      .side-menu-item:hover {
-        text-decoration: underline;
-      }
-      .divider {
-        width: 100%;
-        height: 1px;
-        background-color: lightgrey;
-      }
-      .side-menu-divider{
-        width: 80%;
-        height: 0.5px;
-        background-color: lightgrey;
-        margin-left: 10%;
-        margin-right: 10%;
-      }
-      .main-text {
-        margin-top: 15px;
-      }
-      .main-text-menu {
-        display: flex;
-        flex-direction: row;
-      }
-      .title > h1 {
-        font-size: 30px;
-      }
-      .horiz-menu-search {
-        position: absolute;
-        top: 20px;
-        left: 280px;
-      }
-      .horiz-menu-buttons {
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        right: 110px;
-        top: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="horiz-menu">
-      <img src="wiki_logo.png" style="width: 200px; heigth: 200px; margin-left: 10px;margin-top: 10px"></img>
-      <div class="horiz-menu-search">
-        <input type="text" placeholder="Pesquisar na Wikipédia" style="width:400px; height: 25px">
-        <input type="button" value="Pesquisar">
-      </div>
-      <div class="horiz-menu-buttons">
-        <p>Criar uma conta</p>
-        <p style="margin-left: 10px">Entrar</p>
-      </div>
-    </div>
-    <div class="container">
-      <nav class="side-menu">
-        <p class="side-menu-title">Conteúdo</p>
-        <div class="side-menu-divider"></div>
-        <ul class="side-menu-list">
-          <a class="side-menu-item" href="#">Início</a>
-          <a class="side-menu-item" href="#">História</a>
-          <a class="side-menu-item" href="#">Descrição</a>
-          <a class="side-menu-item" href="#">Exemplo de código HTML5</a>
-          <a class="side-menu-item" href="#">Populariadade</a>
-          <a class="side-menu-item" href="#">Logo do HTML5</a>
-          <a class="side-menu-item" href="#">Novos elementos do HTML5</a>
-          <a class="side-menu-item" href="#">Ver também</a>
-          <a class="side-menu-item" href="#">Bibliografia</a>
-          <a class="side-menu-item" href="#">Referências</a>
-        </ul>
-      </nav>
-      <div class="content">
-        <div class="title">
-          <h1>HTML5</h1>
-          <div class="divider"></div>
-          <ul class="main-text-menu">
-            <a href="#">Artigo</a>
-            <a style="margin-left:10px" href="#">Discussão</a>
-          </ul>
-          <div class="divider"></div>
-          <div class="information">
-            <div class="main-text">
-              <p>Origem: Wikipédia, a enciclopédia livre.<br/><br/>
-                <b>HTML5</b> (<a href="#">Hypertext Markup Language</a>, versão 5) é uma linguagem de marcação para a World Wide Web e é uma tecnologia chave da Internet, originalmente proposto por Opera Software. É a quinta versão da linguagem HTML. Esta nova versão traz consigo importantes mudanças quanto ao papel do HTML no mundo da Web, através de novas funcionalidades como semântica e acessibilidade. Possibilita o uso de novos recursos antes possíveis apenas com a aplicação de outras tecnologias. Sua essência tem sido melhorar a linguagem com o suporte para as mais recentes multimídias, enquanto a mantém facilmente legível por seres humanos e consistentemente compreendida por computadores e outros dispositivos (navegadores, parsers etc). O HTML5 será o novo padrão para HTML, XHTML, e HTML DOM. Atualmente,[quando?] está em fase de esboço, porém diversos navegadores já implementam algumas de suas funcionalidades.<br /><br />
-                Após seus predecessores imediatos HTML 4.01 e XHTML 1.1, HTML5 é uma resposta à observação de que o HTML e o XHTML, de uso comum na World Wide Web, é uma mistura de características introduzidas por várias especificações, juntamente com aquelas introduzidas por software, tais como os navegadores, aqueles estabelecidos pela prática comum, e os muitos erros de sintaxe em documentos existentes na web. É, também, uma tentativa de definir uma única linguagem simples de marcação que possa ser escrita em HTML ou em sintaxe XHTML. Isso inclui modelos de processamento detalhados para incentivar implementações mais interoperáveis; isso estende, melhora e racionaliza a marcação disponível para documentos, e introduz marcações e interfaces de programação de aplicações (APIs) para aplicações web complexas. Pelas mesmas razões, HTML5 também é um candidato em potencial aplicações multi-plataforma móveis. Muitos recursos do HTML5 tem sido construídos com a consideração de ser capaz de executar em dispositivos de baixa potência como smartphones e tablets.<br /><br />
-                Em particular, HTML5 adiciona várias novas funções sintáticas. Elas incluem as tags de &lt;video&gt;, &lt;audio&gt;, &lt;header&gt; e elementos &lt;canvas&gt;, assim como a integração de conteúdos SVG que substituem o uso de tags &lt;object&gt; genéricas. Estas funções são projetadas para tornar mais fácil a inclusão e a manipulação de conteúdo gráfico e multimídia na web sem ter de recorrer a plugins proprietários e APIs. Outros novos elementos, como &lt;section&gt;, &lt;article&gt;, &lt;header&gt; e &lt;nav&gt;, são projetados para enriquecer o conteúdo semântico dos documentos. Novos atributos têm sido introduzidos com o mesmo propósito, enquanto alguns elementos e atributos têm sido removidos. Alguns elementos, como &lt;a&gt;, &lt;cite&gt; e &lt;menu&gt; têm sido mudados, redefinidos ou padronizados. As APIs e os modelos de objetos de documentos (DOM) não são mais pensamentos retrógrados, mas são partes fundamentais da especificação do HTML5.[2] HTML5 também define com algum detalhe o processamento necessário para que erros de sintaxe de documentos inválidos sejam tratados uniformemente por todos os browsers e outros agentes de usuários em conformidade com o HTML5.
-              </p>
-            </div>
-            <div class="description">
-              <div class="description-banner">
-                <p>HyperText Markup Language</p>
-                <img src="html_logo.png"></img>
-                <table>
-                  <tr >
-                    <th>Extensão do Arquivo</th>
-                    <td>.htm, .html</td>
-                  </tr>
-                  <tr>
-                    <th>MIME</th>
-                    <td>text/html</td>
-                  </tr>
-                  <tr>
-                    <th>Desenvolvido por</th>
-                    <td><a href="#">World Wide Web Consortium</a></td>
-                  </tr>
-                  <tr>
-                    <th>Página oficial</th>
-                    <td><a href="#">html.spec.whatwg.org</a></td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="side-column"></div>
-    </div>
-  </body>
-</html>
+        input:focus,
+        textarea:focus {
+          border-color: #999999;
+        }
+      </style>
+  <div style="width:100%; margin: 0 auto;">
+    <form>
+      <input  id="first_name" maxlength="40" name="first_name" type="text" placeholder=Name style="width: 100%; height:48px; font-size:16px; padding: 16px; margin-bottom: 24px; border: 1px solid #666666; background-color: #1A1A1A; border-radius: 8px; color: #FFFFFF"/><br>
+      <input  id="email" maxlength="80" name="email" type="text" placeholder=Email style="width: 100%; height:48px; font-size:16px; padding: 16px; margin-bottom: 24px; border: 1px solid #666666; background-color: #1A1A1A; border-radius: 8px; color: #FFFFFF" /><br>
+      <input  id="company" maxlength="40" name="company" type="text" placeholder=Company style="width: 100%; height:48px; font-size:16px; padding: 16px; margin-bottom: 24px; border: 1px solid #666666; background-color: #1A1A1A; border-radius: 8px; color: #FFFFFF"/><br>
+      <textarea  id="company" maxlength=“500” name="company" placeholder=Message style="width: 100%; height:200px; font-size:16px; padding:16px; margin-bottom: 24px; border: 1px solid #666666; background-color: #1A1A1A; border-radius: 8px; color: #FFFFFF"></textarea><br>
+      <input type="submit" name="submit" style="width: 164px; height:48px; font-size:16px; margin-bottom: 24px; background-color: #FFFFFF; border-radius: 8px; color: #000000; text-transform: uppercase; font-weight: bold; border:none;">
+    </form>
+  </div>
