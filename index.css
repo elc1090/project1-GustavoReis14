@@ -1,0 +1,152 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+* {
+  background-color: #0E0E0E;
+  font-family: 'Roboto';
+  color: white;
+  margin-left: 5px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(102, 102, 102, 1);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(102, 102, 102, 1);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgba(102, 102, 102, 1);
+}
+
+.form {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media(max-width: 1000px) {
+  .form {
+    grid-template-columns: 1fr;
+  }  
+}
+
+input[type="text"] {
+  padding-left: 20px;
+  height: 53px;
+  border: 1px solid #666666; 
+  background-color: #1A1A1A; 
+  border-radius: 8px; 
+  margin-top: 32px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  width: 96%;
+}
+
+select {
+  height: 53px;
+  border: 1px solid #666666; 
+  background-color: #1A1A1A; 
+  border-radius: 8px; 
+  margin-top: 32px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  width: 98.5%;
+}
+
+textarea {
+  padding-left: 20px;
+  padding-top: 10px;
+  height: 116px;
+  border: 1px solid #666666; 
+  background-color: #1A1A1A; 
+  border-radius: 8px; 
+  margin-top: 32px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  resize: none;
+  width: 97.5%;
+}
+
+input[type="submit"] {
+  width: 236px;
+  height: 56px;
+  background: #F2F2F2;
+  border-radius: 8px;
+  margin-top: 40px;
+  font-size: 21px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  color: #0E0E0E;
+  border: none;
+  cursor: pointer;
+}
+
+
+.displayNone {
+  display: none;
+}
+
+.requiredField {
+  border-color: rgba(240, 83, 62, 1);
+}
+
+.myselect {
+  color:#666666;  
+}
+
+section option[value=""] {
+  color: #666666;
+}

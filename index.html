@@ -1,33 +1,131 @@
-<!--  ----------------------------------------------------------------------  -->
-  <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
-  <!--  If necessary, please modify the charset parameter to specify the        -->
-  <!--  character set of your HTML page.                                        -->
-  <!--  ----------------------------------------------------------------------  -->
-  <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-    <!--  ----------------------------------------------------------------------  -->
-    <!--  NOTE: Please add the following <FORM> element to your page.             -->
-    <!--  ----------------------------------------------------------------------  -->
-    <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
-    <input type=hidden name="oid" value="00D8B0000008hfE">
-    <input type=hidden name="retURL" value="http://">
-    <!--  ----------------------------------------------------------------------  -->
-    <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-    <!--  these lines if you wish to test in debug mode.                          -->
-    <!--  <input type="hidden" name="debug" value=1>                              -->
-    <!--  <input type="hidden" name="debugEmail" value="jyunis@cognyhub.com">     -->
-    <!--  ----------------------------------------------------------------------  -->
-    <style>
-        input:focus,
-        textarea:focus {
-          border-color: #999999;
-        }
-      </style>
-  <div style="width:100%; margin: 0 auto;">
-    <form>
-      <input  id="first_name" maxlength="40" name="first_name" type="text" placeholder=Name style="width: 100%; height:48px; font-size:16px; padding: 16px; margin-bottom: 24px; border: 1px solid #666666; background-color: #1A1A1A; border-radius: 8px; color: #FFFFFF"/><br>
-      <input  id="email" maxlength="80" name="email" type="text" placeholder=Email style="width: 100%; height:48px; font-size:16px; padding: 16px; margin-bottom: 24px; border: 1px solid #666666; background-color: #1A1A1A; border-radius: 8px; color: #FFFFFF" /><br>
-      <input  id="company" maxlength="40" name="company" type="text" placeholder=Company style="width: 100%; height:48px; font-size:16px; padding: 16px; margin-bottom: 24px; border: 1px solid #666666; background-color: #1A1A1A; border-radius: 8px; color: #FFFFFF"/><br>
-      <textarea  id="company" maxlength=“500” name="company" placeholder=Message style="width: 100%; height:200px; font-size:16px; padding:16px; margin-bottom: 24px; border: 1px solid #666666; background-color: #1A1A1A; border-radius: 8px; color: #FFFFFF"></textarea><br>
-      <input type="submit" name="submit" style="width: 164px; height:48px; font-size:16px; margin-bottom: 24px; background-color: #FFFFFF; border-radius: 8px; color: #000000; text-transform: uppercase; font-weight: bold; border:none;">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+
+    <title>Request a Demo</title>
+  </head>
+  <body>
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+    
+      <input type=hidden name="oid" value="00D5Y000001e5K8">
+      <input type=hidden name="retURL" value="https://www.cognyhub.com/">
+
+      <div class="form">
+          <div>
+            <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" placeholder="First Name*"/><br>
+          </div>
+          <div>
+            <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" placeholder="Last Name*"/><br>
+          </div>
+          <div>
+            <input  id="email" maxlength="80" name="email" size="20" type="text" placeholder="Company E-mail*"/><br>
+          </div>
+          <div>
+            <input  id="phone" maxlength="40" name="phone" size="20" type="text" placeholder="Phone" oninput="this.value = this.value.replace(/[^0-9]/g, '')"/><br>
+          </div>
+          <div>
+            <select  id="00N5Y00000TsLi4" name="00N5Y00000TsLi4" title="Company Type" class="myselect" onchange="this.className=this.options[this.selectedIndex].className">
+              <option value="" selected disabled>&nbsp;&nbsp;&nbsp;Organization Type*</option>
+              <option value="Nonprofit Organization">&nbsp;&nbsp;&nbsp;Nonprofit Organization</option>
+              <option value="Agency">&nbsp;&nbsp;&nbsp;Agency</option>
+              <option value="Other">&nbsp;&nbsp;&nbsp;Other</option>
+              <option value="Arena/Stadium">&nbsp;&nbsp;&nbsp;Arena/Stadium</option>
+              <option value="Team">&nbsp;&nbsp;&nbsp;Team</option>
+              <option value="Brand">&nbsp;&nbsp;&nbsp;Brand</option>
+            </select><br>
+          </div>
+          <div>
+            <select  id="00N5Y00000TsLiT" name="00N5Y00000TsLiT" title="Region" class="myselect" onchange="this.className=this.options[this.selectedIndex].className">
+              <option value="" selected disabled>&nbsp;&nbsp;&nbsp;Region*</option>
+              <option value="North America">&nbsp;&nbsp;&nbsp;North America</option>
+              <option value="Latin America">&nbsp;&nbsp;&nbsp;Latin America</option>
+              <option value="Europe">&nbsp;&nbsp;&nbsp;Europe</option>
+              <option value="Asia">&nbsp;&nbsp;&nbsp;Asia</option>
+              <option value="Other">&nbsp;&nbsp;&nbsp;Other</option>
+            </select><br>
+          </div>
+          <div>
+            <input  id="company" maxlength="40" name="company" size="20" type="text" placeholder="Company Name*"/><br>
+          </div>
+          <div>
+            <input  id="title" maxlength="40" name="title" size="20" type="text" placeholder="Your Role?*"/><br>
+          </div>
+          <div>
+            <select  id="industry" name="industry" class="myselect" onchange="this.className=this.options[this.selectedIndex].className">
+              <option value="" selected disabled>&nbsp;&nbsp;&nbsp;What industry you work in?*</option>
+              <option value="Agricultura">&nbsp;&nbsp;&nbsp;Agriculture</option>
+              <option value="Automobilístico">&nbsp;&nbsp;&nbsp;Automobile</option>
+              <option value="Banco">&nbsp;&nbsp;&nbsp;Bank</option>
+              <option value="Indústria de Bicicletas">&nbsp;&nbsp;&nbsp;Bicycle Industrie</option>
+              <option value="Produtos Químicos">&nbsp;&nbsp;&nbsp;Chemicals</option>
+              <option value="Comunicação">&nbsp;&nbsp;&nbsp;Comunication</option>
+              <option value="Construção">&nbsp;&nbsp;&nbsp;Construction</option>
+              <option value="Educação">&nbsp;&nbsp;&nbsp;Education</option>
+              <option value="Eletrônicos">&nbsp;&nbsp;&nbsp;Eletronics</option>
+              <option value="Energia">&nbsp;&nbsp;&nbsp;Energy</option>
+              <option value="Engenharia">&nbsp;&nbsp;&nbsp;Engineering</option>
+              <option value="Entretenimento">&nbsp;&nbsp;&nbsp;Entreteniment</option>
+              <option value="Finanças">&nbsp;&nbsp;&nbsp;Finances</option>
+              <option value="Frota e Soluções de Mobilidade">&nbsp;&nbsp;&nbsp;Fleet and Mobilites Solutions</option>
+              <option value="Alimentos">&nbsp;&nbsp;&nbsp;Foods</option>
+              <option value="Hospitalar">&nbsp;&nbsp;&nbsp;Hospital</option>
+              <option value="Hoteleiro">&nbsp;&nbsp;&nbsp;Hotelier</option>
+              <option value="Manufatura">&nbsp;&nbsp;&nbsp;Manufacture</option>
+              <option value="Mídia">&nbsp;&nbsp;&nbsp;Media</option>
+              <option value="Petróleo">&nbsp;&nbsp;&nbsp;Petroleum</option>
+              <option value="Farmacêutico">&nbsp;&nbsp;&nbsp;Pharmaceutical</option>
+              <option value="Público">&nbsp;&nbsp;&nbsp;Public</option>
+              <option value="Indústria de Celulose e Papel">&nbsp;&nbsp;&nbsp;Pulp and Paper Industrie</option>
+              <option value="Saúde">&nbsp;&nbsp;&nbsp;Saúde</option>
+              <option value="Segurança">&nbsp;&nbsp;&nbsp;Segurança</option>
+              <option value="Seguros">&nbsp;&nbsp;&nbsp;Seguros</option>
+              <option value="Serviços">&nbsp;&nbsp;&nbsp;Serviços</option>
+              <option value="Tecnologia">&nbsp;&nbsp;&nbsp;Tecnologia</option>
+              <option value="Telecomunicações">&nbsp;&nbsp;&nbsp;Telecomunicações</option>
+              <option value="Transporte">&nbsp;&nbsp;&nbsp;Transporte</option>
+            </select><br>
+          </div>
+          <div>
+            <select  id="00N5Y00000TsLhp" name="00N5Y00000TsLhp" title="Reference" class="myselect" onchange="this.className=this.options[this.selectedIndex].className">
+              <option value="" selected disabled>&nbsp;&nbsp;&nbsp;How did you hear about Cogny?*</option>
+              <option value="Search Engine">&nbsp;&nbsp;&nbsp;Search Engine</option>
+              <option value="Salesforce AppExchange">&nbsp;&nbsp;&nbsp;Salesforce AppExchange</option>
+              <option value="Colleague Recommendation">&nbsp;&nbsp;&nbsp;Colleague Recommendation</option>
+              <option value="Webinar">&nbsp;&nbsp;&nbsp;Webinar</option>
+              <option value="Event">&nbsp;&nbsp;&nbsp;Event</option>
+              <option value="Other">&nbsp;&nbsp;&nbsp;Other</option>
+              <option value="LinkedIn">&nbsp;&nbsp;&nbsp;LinkedIn</option>
+            </select><br>
+          </div>          
+          
+      </div>
+      <textarea  id="tellMore" name="description" placeholder="Tell us more about your interest*"></textarea><br>
+      
+      
+      <select  id="00N5Y00000TsLhz" name="00N5Y00000TsLhz" title="Type" class="displayNone">
+        <option value="Demo Request">Demo Request</option>
+      </select>
+      
+      <select  id="lead_source" name="lead_source" class="displayNone">
+        <option value="Website">Website</option>
+      </select>
+
+      <select  id="Campaign_ID" name="Campaign_ID" class="displayNone">
+        <option value="7015Y0000041fIy">Website Leads</option>
+      </select>
+    
+      <input id="submit" type="submit" name="submit" value="SEND">
     </form>
-  </div>
+  
+    <script src="index.js"></script> 
+  </body>
+</html>
