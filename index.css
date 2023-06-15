@@ -52,7 +52,6 @@ table {
   background-color: #0E0E0E;
   font-family: 'Work Sans';
   color: white;
-  margin-left: 5px;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -68,10 +67,18 @@ table {
   color: rgba(102, 102, 102, 1);
 }
 
+form {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
 .form {
   display: grid;
-  grid-gap: 20px;
+  column-gap: 20px;
+  row-gap: 30px;
   grid-template-columns: 1fr 1fr;
+ 
 }
 
 @media(max-width: 780px) {
@@ -81,44 +88,42 @@ table {
 }
 
 input[type="text"] {
-  padding-left: 20px;
   height: 53px;
+  width: 100%;
   border: 1px solid #666666; 
   background-color: #1A1A1A; 
   border-radius: 8px; 
-  margin-top: 32px;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  width: 96%;
+  padding: 0;
 }
 
 select {
   height: 53px;
+  width: 100%;
   border: 1px solid #666666; 
   background-color: #1A1A1A; 
   border-radius: 8px; 
-  margin-top: 32px;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  width: 98.5%;
 }
 
 textarea {
-  padding-left: 20px;
   padding-top: 10px;
+  margin-top: 30px;
+  width: 100%;
   height: 116px;
   border: 1px solid #666666; 
   background-color: #1A1A1A; 
   border-radius: 8px; 
-  margin-top: 32px;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
   resize: none;
-  width: 97.5%;
 }
+
 
 input[type="submit"] {
   width: 236px;
@@ -149,4 +154,12 @@ input[type="submit"] {
 
 section option[value=""] {
   color: #666666;
+}
+
+input[type="text"], textarea {
+    padding: 22px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+
 }
